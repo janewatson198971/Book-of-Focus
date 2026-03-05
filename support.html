@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Support • Book of Focus</title>
+  <meta name="description" content="Support page for Book of Focus by Newat. Contact email, troubleshooting tips, and request template." />
+  <style>
+    :root{
+      --bg1:#07121f; --bg2:#0b1b2b; --card:rgba(255,255,255,.08);
+      --stroke:rgba(255,255,255,.14); --text:rgba(255,255,255,.92);
+      --muted:rgba(255,255,255,.72); --shadow: 0 18px 60px rgba(0,0,0,.45);
+      --accent1:#60a5fa; --accent2:#34d399; --accent3:#f59e0b;
+      --radius:24px; --max:1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; color:var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      background:
+        radial-gradient(900px 600px at 15% 15%, rgba(96,165,250,.18), transparent 60%),
+        radial-gradient(900px 600px at 85% 20%, rgba(52,211,153,.14), transparent 55%),
+        radial-gradient(900px 700px at 55% 95%, rgba(245,158,11,.10), transparent 55%),
+        linear-gradient(180deg, var(--bg1), var(--bg2));
+      overflow-x:hidden;
+    }
+    .wrap{max-width:var(--max); margin:0 auto; padding:24px 16px 54px}
+    .nav{
+      display:flex; align-items:center; justify-content:space-between; gap:14px;
+      padding:14px 14px 0;
+    }
+    .brand{display:flex; align-items:center; gap:12px; text-decoration:none}
+    .logo{
+      width:44px; height:44px; border-radius:14px;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(96,165,250,.95), rgba(96,165,250,.18) 55%, transparent 56%),
+        radial-gradient(circle at 70% 70%, rgba(52,211,153,.88), rgba(52,211,153,.15) 58%, transparent 59%),
+        rgba(255,255,255,.06);
+      border:1px solid var(--stroke);
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    }
+    .brand h1{font-size:14px; margin:0}
+    .brand p{margin:2px 0 0; font-size:12px; color:var(--muted)}
+    .tag{
+      padding:9px 12px; border-radius:999px;
+      background:rgba(255,255,255,.06);
+      border:1px solid var(--stroke);
+      font-size:12px; color:var(--muted);
+      white-space:nowrap;
+    }
+    .hero{
+      margin-top:18px;
+      padding:0 14px;
+    }
+    .panel{
+      background:var(--card);
+      border:1px solid var(--stroke);
+      border-radius:var(--radius);
+      box-shadow: var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+    .panel:before{
+      content:"";
+      position:absolute; inset:-2px;
+      background: linear-gradient(120deg, rgba(96,165,250,.18), rgba(52,211,153,.14), rgba(245,158,11,.10));
+      filter: blur(24px);
+      opacity:.55;
+      pointer-events:none;
+    }
+    .inner{
+      position:relative;
+      padding:22px;
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap:18px;
+    }
+    .title{margin:0 0 8px; font-size:28px; letter-spacing:-.5px}
+    .subtitle{margin:0 0 14px; color:var(--muted); font-size:14px; line-height:1.6}
+    .btns{display:flex; flex-wrap:wrap; gap:10px}
+    .btn{
+      appearance:none; border:1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.08);
+      color:var(--text);
+      padding:12px 14px;
+      border-radius:16px;
+      font-weight:600;
+      font-size:13px;
+      cursor:pointer;
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      box-shadow: 0 12px 34px rgba(0,0,0,.26);
+      transition: transform .12s ease, background .12s ease, border-color .12s ease;
+    }
+    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.10); border-color: rgba(255,255,255,.22)}
+    .btnPrimary{
+      background: linear-gradient(120deg, rgba(96,165,250,.18), rgba(52,211,153,.14));
+      border-color: rgba(255,255,255,.22);
+    }
+    .box{
+      background:rgba(0,0,0,.18);
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:18px;
+      padding:14px;
+    }
+    .kv{display:grid; gap:10px}
+    .row{display:flex; justify-content:space-between; gap:14px; align-items:baseline}
+    .k{color:var(--muted); font-size:12px}
+    .v{font-size:13px}
+    main{
+      padding:16px 14px 0;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+    }
+    .card{
+      background:rgba(255,255,255,.06);
+      border:1px solid var(--stroke);
+      border-radius:22px;
+      box-shadow: 0 14px 44px rgba(0,0,0,.28);
+      padding:18px;
+    }
+    h2{margin:0 0 10px; font-size:16px}
+    ul{margin:10px 0 0; padding-left:18px; color:var(--muted); line-height:1.7}
+    .template{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size:12px; line-height:1.6; color:rgba(255,255,255,.82);
+      background:rgba(0,0,0,.25);
+      border:1px dashed rgba(255,255,255,.18);
+      border-radius:16px;
+      padding:14px;
+      white-space:pre-wrap;
+      word-break:break-word;
+      margin-top:12px;
+    }
+    footer{
+      padding:26px 14px 0;
+      color:rgba(255,255,255,.55);
+      font-size:12px;
+    }
+    .links{display:flex; flex-wrap:wrap; gap:10px; margin-top:10px}
+    .chip{
+      padding:8px 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.12);
+      text-decoration:none;
+      color:rgba(255,255,255,.78);
+    }
+    @media (max-width: 900px){
+      .inner{grid-template-columns:1fr}
+      main{grid-template-columns:1fr}
+      .title{font-size:24px}
+      .hero{padding-left:0; padding-right:0}
+      main{padding-left:0; padding-right:0}
+      footer{padding-left:0; padding-right:0}
+      .nav{padding-left:0; padding-right:0}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="nav">
+      <a class="brand" href="./marketing.html">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>Book of Focus</h1>
+          <p>Support • Developer: Newat</p>
+        </div>
+      </a>
+      <div class="tag">Response via Email</div>
+    </div>
+
+    <section class="hero">
+      <div class="panel">
+        <div class="inner">
+          <div>
+            <h2 class="title">Support</h2>
+            <p class="subtitle">
+              Need help, found a bug, or want to suggest a feature? Email me and I’ll do my best to respond quickly.
+              I’m building Book of Focus step by step and feedback is welcome.
+            </p>
+            <div class="btns">
+              <a class="btn btnPrimary" href="mailto:janewatson198971@gmail.com?subject=Book%20of%20Focus%20Support&body=Hello%20Newat,%0A%0AI%20need%20help%20with:%20%0A%0ADevice:%20%0AAndroid%20version:%20%0AApp%20version:%20%0ASteps%20to%20reproduce:%20%0AExpected:%20%0AActual:%20%0A%0AThank%20you!">
+                ✉ Email Support
+              </a>
+              <a class="btn" href="./privacy.html">🔒 Privacy Policy</a>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="kv">
+              <div class="row"><div class="k">Developer</div><div class="v">Newat</div></div>
+              <div class="row"><div class="k">App</div><div class="v">Book of Focus</div></div>
+              <div class="row"><div class="k">Email</div><div class="v"><a href="mailto:janewatson198971@gmail.com">janewatson198971@gmail.com</a></div></div>
+              <div class="row"><div class="k">Preferred info</div><div class="v">Device + steps</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <section class="card">
+        <h2>Troubleshooting</h2>
+        <ul>
+          <li>Restart the app and try again.</li>
+          <li>Update the app to the latest version from Google Play.</li>
+          <li>Check available storage and system updates.</li>
+          <li>If something looks stuck, describe what you tapped and what happened.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Feature Requests</h2>
+        <ul>
+          <li>Tell me what problem you want to solve (not only the feature).</li>
+          <li>Share a simple example of your ideal workflow.</li>
+          <li>Optional: add screenshots or screen recordings.</li>
+        </ul>
+      </section>
+
+      <section class="card" style="grid-column:1/-1">
+        <h2>Email Template</h2>
+        <div class="template" id="tmpl">Subject: Book of Focus — Support
+
+Hello Newat,
+
+Type of request: Bug / Question / Feature request
+
+Device model:
+Android version:
+App version:
+
+Steps to reproduce:
+1)
+2)
+3)
+
+Expected result:
+Actual result:
+
+Additional details (optional):
+
+Thank you!</div>
+      </section>
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> Newat • Book of Focus</div>
+      <div class="links">
+        <a class="chip" href="./marketing.html">Marketing</a>
+        <a class="chip" href="./support.html" aria-current="page">Support</a>
+        <a class="chip" href="./privacy.html">Privacy Policy</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = String(new Date().getFullYear());
+  </script>
+</body>
+</html>
