@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Book of Focus • Official Page</title>
+  <meta name="description" content="Book of Focus by Newat. A beginner indie developer building a valuable app with transparency. No subscriptions yet; monetization planned in the future." />
+  <style>
+    :root{
+      --bg1:#070816; --bg2:#0b1430;
+      --card:rgba(255,255,255,.08); --stroke:rgba(255,255,255,.14);
+      --text:rgba(255,255,255,.92); --muted:rgba(255,255,255,.72);
+      --shadow: 0 18px 60px rgba(0,0,0,.45);
+      --a1:#a78bfa; --a2:#22c55e; --a3:#38bdf8; --a4:#fb7185;
+      --radius:26px; --max:1180px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; color:var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      background:
+        radial-gradient(900px 600px at 12% 12%, rgba(167,139,250,.20), transparent 60%),
+        radial-gradient(900px 600px at 92% 18%, rgba(56,189,248,.16), transparent 55%),
+        radial-gradient(900px 700px at 56% 98%, rgba(34,197,94,.12), transparent 55%),
+        linear-gradient(180deg, var(--bg1), var(--bg2));
+      overflow-x:hidden;
+    }
+    .wrap{max-width:var(--max); margin:0 auto; padding:22px 16px 60px}
+    .nav{
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+      padding:10px 14px 0;
+    }
+    .brand{display:flex; align-items:center; gap:12px; text-decoration:none}
+    .logo{
+      width:46px; height:46px; border-radius:16px;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(167,139,250,.95), rgba(167,139,250,.18) 55%, transparent 56%),
+        radial-gradient(circle at 72% 70%, rgba(56,189,248,.9), rgba(56,189,248,.16) 58%, transparent 59%),
+        rgba(255,255,255,.06);
+      border:1px solid var(--stroke);
+      box-shadow: 0 12px 34px rgba(0,0,0,.25);
+      position:relative;
+      overflow:hidden;
+    }
+    .logo:after{
+      content:"";
+      position:absolute; inset:-40%;
+      background: conic-gradient(from 180deg, transparent 0 40%, rgba(255,255,255,.35) 55%, transparent 70% 100%);
+      animation: spin 6.8s linear infinite;
+      opacity:.55;
+    }
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .brand h1{font-size:14px; margin:0}
+    .brand p{margin:2px 0 0; font-size:12px; color:var(--muted)}
+
+    .navLinks{display:flex; flex-wrap:wrap; gap:10px}
+    .chip{
+      padding:9px 12px; border-radius:999px;
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.12);
+      text-decoration:none;
+      color:rgba(255,255,255,.82);
+      font-size:12px;
+    }
+
+    .hero{
+      margin-top:18px;
+      padding:0 14px;
+    }
+    .panel{
+      background:var(--card);
+      border:1px solid var(--stroke);
+      border-radius:var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+    .panel:before{
+      content:"";
+      position:absolute; inset:-2px;
+      background: linear-gradient(120deg, rgba(167,139,250,.18), rgba(56,189,248,.14), rgba(34,197,94,.12), rgba(251,113,133,.08));
+      filter: blur(26px);
+      opacity:.55;
+      pointer-events:none;
+    }
+    .heroInner{
+      position:relative;
+      padding:24px;
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    .title{
+      margin:0 0 10px;
+      font-size:34px;
+      line-height:1.06;
+      letter-spacing:-.8px;
+    }
+    .subtitle{
+      margin:0 0 16px;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.7;
+    }
+    .cta{
+      display:flex; flex-wrap:wrap; gap:10px;
+      margin-top:8px;
+    }
+    .btn{
+      appearance:none;
+      border:1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.08);
+      color:var(--text);
+      padding:12px 14px;
+      border-radius:18px;
+      font-weight:700;
+      font-size:13px;
+      cursor:pointer;
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      box-shadow: 0 12px 34px rgba(0,0,0,.26);
+      transition: transform .12s ease, background .12s ease, border-color .12s ease;
+    }
+    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.10); border-color: rgba(255,255,255,.22)}
+    .btnPrimary{
+      background: linear-gradient(120deg, rgba(167,139,250,.18), rgba(56,189,248,.14));
+      border-color: rgba(255,255,255,.22);
+    }
+    .btnGreen{
+      background: linear-gradient(120deg, rgba(34,197,94,.18), rgba(56,189,248,.10));
+      border-color: rgba(34,197,94,.28);
+    }
+
+    .side{
+      background:rgba(0,0,0,.18);
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:20px;
+      padding:16px;
+      display:grid;
+      gap:12px;
+      align-content:start;
+    }
+    .metric{
+      display:flex; justify-content:space-between; align-items:baseline; gap:14px;
+      padding:12px;
+      border-radius:16px;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.10);
+    }
+    .metric .k{color:var(--muted); font-size:12px}
+    .metric .v{font-size:13px; font-weight:700}
+    .badge{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:9px 12px; border-radius:999px;
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.12);
+      font-size:12px; color:rgba(255,255,255,.80);
+      width:max-content;
+    }
+    .spark{width:8px; height:8px; border-radius:50%; background:var(--a2); box-shadow:0 0 18px rgba(34,197,94,.55)}
+
+    main{
+      padding:16px 14px 0;
+      display:grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap:14px;
+    }
+    .card{
+      background:rgba(255,255,255,.06);
+      border:1px solid var(--stroke);
+      border-radius:22px;
+      box-shadow: 0 14px 44px rgba(0,0,0,.28);
+      padding:18px;
+      position:relative;
+      overflow:hidden;
+      min-height: 180px;
+    }
+    .card:after{
+      content:"";
+      position:absolute;
+      width:260px; height:260px; border-radius:50%;
+      left:-140px; bottom:-140px;
+      background: radial-gradient(circle at 40% 35%, rgba(167,139,250,.16), transparent 62%);
+      pointer-events:none;
+    }
+    h2{margin:0 0 10px; font-size:16px}
+    p{margin:0; color:var(--muted); font-size:13px; line-height:1.7}
+    ul{margin:10px 0 0; padding-left:18px; color:var(--muted); line-height:1.7; font-size:13px}
+
+    .wide{grid-column:1/-1}
+    .roadmap{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+      margin-top:12px;
+    }
+    .step{
+      padding:14px;
+      border-radius:18px;
+      background:rgba(0,0,0,.18);
+      border:1px solid rgba(255,255,255,.12);
+    }
+    .step b{color:rgba(255,255,255,.90)}
+    footer{
+      padding:26px 14px 0;
+      color:rgba(255,255,255,.55);
+      font-size:12px;
+    }
+
+    @media (max-width: 980px){
+      .heroInner{grid-template-columns:1fr}
+      main{grid-template-columns:1fr}
+      .title{font-size:28px}
+      .hero{padding-left:0; padding-right:0}
+      main{padding-left:0; padding-right:0}
+      footer{padding-left:0; padding-right:0}
+      .nav{padding-left:0; padding-right:0}
+      .roadmap{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="nav">
+      <a class="brand" href="./marketing.html" aria-label="Marketing home">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>Book of Focus</h1>
+          <p>Official page • Developer: Newat</p>
+        </div>
+      </a>
+
+      <div class="navLinks" aria-label="Navigation">
+        <a class="chip" href="./marketing.html" aria-current="page">Marketing</a>
+        <a class="chip" href="./support.html">Support</a>
+        <a class="chip" href="./privacy.html">Privacy Policy</a>
+      </div>
+    </div>
+
+    <section class="hero">
+      <div class="panel">
+        <div class="heroInner">
+          <div>
+            <h2 class="title">Build better focus, one small step at a time.</h2>
+            <p class="subtitle">
+              <strong>Book of Focus</strong> is an app made by a beginner indie developer (<strong>Newat</strong>).
+              I’m working carefully and consistently to bring real value and keep everything transparent.
+              <br><br>
+              <strong>Current status:</strong> no paid features, no subscriptions. In the future, I plan to add optional monetization
+              to support ongoing development — while keeping the app fair and useful.
+            </p>
+            <div class="cta">
+              <!-- Replace this with your Google Play URL when you have it -->
+              <a class="btn btnPrimary" href="#" onclick="alert('Tip: replace this button link with your Google Play listing URL.'); return false;">
+                ▶ Get it on Google Play
+              </a>
+              <a class="btn btnGreen" href="mailto:janewatson198971@gmail.com?subject=Book%20of%20Focus%20Feedback">
+                ✉ Send Feedback
+              </a>
+              <a class="btn" href="./privacy.html">🔒 Privacy First</a>
+            </div>
+          </div>
+
+          <aside class="side" aria-label="Transparency panel">
+            <div class="badge"><span class="spark" aria-hidden="true"></span> Transparent Development</div>
+            <div class="metric"><div class="k">Developer</div><div class="v">Newat</div></div>
+            <div class="metric"><div class="k">App</div><div class="v">Book of Focus</div></div>
+            <div class="metric"><div class="k">Data collection</div><div class="v">None</div></div>
+            <div class="metric"><div class="k">Monetization</div><div class="v">Planned (optional)</div></div>
+            <div class="metric"><div class="k">Support</div><div class="v">Email</div></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <section class="card">
+        <h2>What I’m building</h2>
+        <p>
+          A practical, lightweight focus companion. The goal is to help users stay consistent without noise, tracking, or hidden data flows.
+        </p>
+        <ul>
+          <li>Simple and clear UX</li>
+          <li>Fast performance</li>
+          <li>Privacy-by-design</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Transparency</h2>
+        <p>
+          I want moderators and users to see a clean picture: who builds the app, how it works, and what it does with data.
+          Book of Focus is designed to operate without collecting personal data.
+        </p>
+        <ul>
+          <li>No selling of data</li>
+          <li>No sharing to third parties</li>
+          <li>No hidden analytics</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Monetization plan</h2>
+        <p>
+          Right now there are <strong>no paid features</strong> and <strong>no subscriptions</strong>.
+          In the future I may add optional purchases/subscriptions to fund development.
+        </p>
+        <ul>
+          <li>Optional, transparent pricing</li>
+          <li>Clear value for paid features</li>
+          <li>Respectful free experience</li>
+        </ul>
+      </section>
+
+      <section class="card wide">
+        <h2>Roadmap (high-level)</h2>
+        <p>
+          This is a direction, not a promise — priorities can change based on feedback and stability.
+        </p>
+        <div class="roadmap">
+          <div class="step">
+            <b>Now</b><br>
+            Improve stability, refine UX, fix bugs quickly, and keep privacy simple and clear.
+          </div>
+          <div class="step">
+            <b>Next</b><br>
+            Add new helpful features based on real user requests, while staying lightweight and fast.
+          </div>
+          <div class="step">
+            <b>Later</b><br>
+            Introduce optional monetization (premium features) to support ongoing development and updates.
+          </div>
+          <div class="step">
+            <b>Always</b><br>
+            Maintain transparency: clear policies, accessible support, and honest product communication.
+          </div>
+        </div>
+      </section>
+
+      <section class="card wide">
+        <h2>Contact</h2>
+        <p>
+          Developer: <strong>Newat</strong><br>
+          App: <strong>Book of Focus</strong><br>
+          Email: <a href="mailto:janewatson198971@gmail.com">janewatson198971@gmail.com</a>
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> Newat • Book of Focus</div>
+      <div style="margin-top:10px">
+        <span style="color:rgba(255,255,255,.7)">Quick links:</span>
+        <span> </span>
+        <a class="chip" href="./support.html">Support</a>
+        <a class="chip" href="./privacy.html">Privacy Policy</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = String(new Date().getFullYear());
+  </script>
+</body>
+</html>
