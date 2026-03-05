@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy • Book of Focus</title>
+  <meta name="description" content="Privacy Policy for Book of Focus by Newat. We do not collect, store, or share any personal data." />
+  <style>
+    :root{
+      --bg1:#0b1020; --bg2:#0e1a2b; --card:rgba(255,255,255,.08);
+      --stroke:rgba(255,255,255,.14); --text:rgba(255,255,255,.92);
+      --muted:rgba(255,255,255,.72); --shadow: 0 18px 60px rgba(0,0,0,.45);
+      --accent1:#6ee7ff; --accent2:#a78bfa; --accent3:#34d399;
+      --danger:#fb7185;
+      --radius:24px;
+      --max:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; color:var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background:
+        radial-gradient(1000px 600px at 10% 10%, rgba(110,231,255,.20), transparent 60%),
+        radial-gradient(900px 540px at 90% 20%, rgba(167,139,250,.18), transparent 58%),
+        radial-gradient(700px 500px at 55% 95%, rgba(52,211,153,.14), transparent 55%),
+        linear-gradient(180deg, var(--bg1), var(--bg2));
+      overflow-x:hidden;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:24px 16px 54px}
+    .top{
+      display:flex; align-items:center; justify-content:space-between; gap:14px;
+      padding:14px 14px 0;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px; text-decoration:none;
+    }
+    .logo{
+      width:44px; height:44px; border-radius:14px;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(110,231,255,.95), rgba(110,231,255,.18) 55%, transparent 56%),
+        radial-gradient(circle at 70% 70%, rgba(167,139,250,.9), rgba(167,139,250,.15) 58%, transparent 59%),
+        rgba(255,255,255,.06);
+      border:1px solid var(--stroke);
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+      position:relative;
+      overflow:hidden;
+    }
+    .logo:after{
+      content:"";
+      position:absolute; inset:-60%;
+      background: conic-gradient(from 220deg, transparent, rgba(255,255,255,.35), transparent 35%);
+      animation: spin 7s linear infinite;
+      filter: blur(0.2px);
+      opacity:.65;
+    }
+    @keyframes spin{to{transform:rotate(360deg)}}
+
+    .brand h1{font-size:14px; margin:0; letter-spacing:.2px}
+    .brand p{margin:2px 0 0; font-size:12px; color:var(--muted)}
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:9px 12px; border-radius:999px;
+      background:rgba(255,255,255,.06);
+      border:1px solid var(--stroke);
+      box-shadow: 0 10px 28px rgba(0,0,0,.18);
+      font-size:12px; color:var(--muted);
+      user-select:none;
+      white-space:nowrap;
+    }
+    .pill .dot{width:7px; height:7px; border-radius:50%; background:var(--accent3); box-shadow:0 0 16px rgba(52,211,153,.6)}
+    header.hero{
+      margin-top:18px;
+      padding:22px 14px 0;
+    }
+    .heroCard{
+      background:var(--card);
+      border:1px solid var(--stroke);
+      border-radius:var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+    .heroCard:before{
+      content:"";
+      position:absolute; inset:-2px;
+      background: linear-gradient(120deg, rgba(110,231,255,.20), rgba(167,139,250,.16), rgba(52,211,153,.12));
+      filter: blur(22px);
+      opacity:.55;
+      pointer-events:none;
+    }
+    .heroInner{
+      position:relative;
+      padding:22px;
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:18px;
+      align-items:start;
+    }
+    .title{
+      margin:0 0 8px;
+      font-size:28px;
+      line-height:1.12;
+      letter-spacing:-.5px;
+    }
+    .subtitle{
+      margin:0 0 14px;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.6;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:14px;
+      padding:16px 14px 0;
+    }
+    .card{
+      background:rgba(255,255,255,.06);
+      border:1px solid var(--stroke);
+      border-radius:22px;
+      box-shadow: 0 14px 44px rgba(0,0,0,.28);
+      padding:18px;
+      position:relative;
+      overflow:hidden;
+    }
+    .card:after{
+      content:"";
+      position:absolute;
+      width:280px; height:280px;
+      border-radius:50%;
+      right:-140px; top:-140px;
+      background: radial-gradient(circle at 30% 30%, rgba(110,231,255,.16), transparent 60%);
+      pointer-events:none;
+    }
+    h2{margin:0 0 10px; font-size:16px}
+    ul{margin:10px 0 0; padding-left:18px; color:var(--muted); line-height:1.7}
+    .kv{
+      display:grid; gap:10px;
+      padding:14px;
+      border-radius:18px;
+      background:rgba(0,0,0,.18);
+      border:1px solid rgba(255,255,255,.12);
+    }
+    .row{display:flex; justify-content:space-between; gap:14px; align-items:baseline}
+    .k{color:var(--muted); font-size:12px}
+    .v{font-size:13px}
+    .btns{
+      display:flex; flex-wrap:wrap; gap:10px;
+      margin-top:14px;
+    }
+    button, .btn{
+      appearance:none; border:1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.08);
+      color:var(--text);
+      padding:12px 14px;
+      border-radius:16px;
+      font-weight:600;
+      font-size:13px;
+      cursor:pointer;
+      transition: transform .12s ease, background .12s ease, border-color .12s ease;
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      box-shadow: 0 12px 34px rgba(0,0,0,.26);
+    }
+    button:hover, .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.10); border-color: rgba(255,255,255,.22)}
+    button:active, .btn:active{transform: translateY(0px)}
+    .btnPrimary{
+      background: linear-gradient(120deg, rgba(110,231,255,.18), rgba(167,139,250,.18));
+      border-color: rgba(255,255,255,.22);
+    }
+    .btnDanger{
+      background: linear-gradient(120deg, rgba(251,113,133,.20), rgba(167,139,250,.14));
+      border-color: rgba(251,113,133,.35);
+    }
+    .smallNote{
+      margin:12px 0 0;
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.6;
+    }
+    footer{
+      padding:26px 14px 0;
+      color:rgba(255,255,255,.55);
+      font-size:12px;
+    }
+    .links{
+      display:flex; flex-wrap:wrap; gap:10px;
+      margin-top:10px;
+    }
+    .chip{
+      padding:8px 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.12);
+      text-decoration:none;
+      color:rgba(255,255,255,.78);
+    }
+
+    /* Mobile */
+    @media (max-width: 860px){
+      .heroInner{grid-template-columns:1fr; padding:18px}
+      .title{font-size:24px}
+      .top{padding-left:0; padding-right:0}
+      header.hero{padding-left:0; padding-right:0}
+      .grid{padding-left:0; padding-right:0}
+      footer{padding-left:0; padding-right:0}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <a class="brand" href="./marketing.html" aria-label="Go to Marketing page">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>Book of Focus</h1>
+          <p>Developer: Newat</p>
+        </div>
+      </a>
+      <div class="pill"><span class="dot" aria-hidden="true"></span> Data Collection: None</div>
+    </div>
+
+    <header class="hero">
+      <section class="heroCard" role="region" aria-label="Privacy Policy summary">
+        <div class="heroInner">
+          <div>
+            <h2 class="title">Privacy Policy</h2>
+            <p class="subtitle">
+              This policy explains how <strong>Book of Focus</strong> handles information.
+              We designed the app to work without collecting personal data.
+            </p>
+
+            <div class="btns">
+              <!-- IMPORTANT: This button attempts multiple common bridges to close the WebView -->
+              <button class="btnDanger" id="closeWebViewBtn" type="button" aria-label="Close this page in the app">
+                ⟵ Close in App
+              </button>
+
+              <a class="btn btnPrimary" href="mailto:janewatson198971@gmail.com?subject=Book%20of%20Focus%20Privacy%20Question" aria-label="Email developer">
+                ✉ Contact Developer
+              </a>
+            </div>
+
+            <p class="smallNote">
+              If you opened this page inside the app, the “Close in App” button will try to call your app’s native bridge.
+              If you opened it in a regular browser, it may do nothing (by design).
+            </p>
+          </div>
+
+          <div class="kv" aria-label="App details">
+            <div class="row"><div class="k">Application</div><div class="v">Book of Focus</div></div>
+            <div class="row"><div class="k">Developer</div><div class="v">Newat</div></div>
+            <div class="row"><div class="k">Support Email</div><div class="v">janewatson198971@gmail.com</div></div>
+            <div class="row"><div class="k">Last Updated</div><div class="v" id="lastUpdated">—</div></div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main class="grid">
+      <section class="card" aria-label="Data practices">
+        <h2>Data Collection</h2>
+        <p class="subtitle" style="margin:0">
+          <strong>We do not collect, store, or share</strong> any personal information.
+        </p>
+        <ul>
+          <li>No account system.</li>
+          <li>No analytics SDKs collecting personal data.</li>
+          <li>No advertising identifiers collected.</li>
+          <li>No sale or transfer of user data.</li>
+        </ul>
+      </section>
+
+      <section class="card" aria-label="Permissions and local processing">
+        <h2>Permissions & Local Processing</h2>
+        <p class="subtitle" style="margin:0">
+          The app is designed to function without sending your data to external servers.
+          Any content you create or settings you configure remain on your device unless the OS itself provides a feature you use (e.g., sharing).
+        </p>
+      </section>
+
+      <section class="card" aria-label="Children's privacy">
+        <h2>Children’s Privacy</h2>
+        <p class="subtitle" style="margin:0">
+          Book of Focus does not knowingly collect personal information from anyone, including children.
+          Because we do not collect data, there is no data to delete or request.
+        </p>
+      </section>
+
+      <section class="card" aria-label="Contact">
+        <h2>Contact</h2>
+        <p class="subtitle" style="margin:0">
+          If you have any questions about this Privacy Policy, contact the developer:
+          <br><strong>Newat</strong> — <a href="mailto:janewatson198971@gmail.com">janewatson198971@gmail.com</a>
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> Newat • Book of Focus</div>
+      <div class="links" aria-label="Quick links">
+        <a class="chip" href="./marketing.html">Marketing</a>
+        <a class="chip" href="./support.html">Support</a>
+        <a class="chip" href="./privacy.html" aria-current="page">Privacy Policy</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Set "Last Updated" to today's date (GitHub Pages static page; adjust manually if you want).
+    (function(){
+      const d = new Date();
+      const fmt = d.toLocaleDateString(undefined, { year:"numeric", month:"long", day:"2-digit" });
+      document.getElementById("lastUpdated").textContent = fmt;
+      document.getElementById("year").textContent = String(d.getFullYear());
+    })();
+
+    // Close WebView bridge (tries several common patterns).
+    // In your Android WebView you can implement one of these:
+    // 1) addJavascriptInterface(object, "Android") with method closeWebView()
+    // 2) window.ReactNativeWebView.postMessage("closeWebView")
+    // 3) intercept custom scheme: app://close-webview
+    // 4) intercept hash: #close-webview
+    function requestCloseWebView(){
+      try {
+        if (window.Android && typeof window.Android.closeWebView === "function") {
+          window.Android.closeWebView();
+          return;
+        }
+      } catch (e) {}
+
+      try {
+        if (window.ReactNativeWebView && typeof window.ReactNativeWebView.postMessage === "function") {
+          window.ReactNativeWebView.postMessage("closeWebView");
+          return;
+        }
+      } catch (e) {}
+
+      try {
+        // Custom scheme approach (you can intercept shouldOverrideUrlLoading)
+        window.location.href = "app://close-webview";
+        return;
+      } catch (e) {}
+
+      // Fallback: hash change (intercept in WebViewClient if you want)
+      window.location.hash = "close-webview";
+    }
+
+    document.getElementById("closeWebViewBtn").addEventListener("click", requestCloseWebView);
+  </script>
+</body>
+</html>
