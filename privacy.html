@@ -144,15 +144,14 @@ If you have any questions regarding this Privacy Policy you can contact the deve
 document.getElementById("year").textContent=new Date().getFullYear();
 
 // ссылка для редиректа
-const redirectUrl="https://bbluehorizonmediastudio.site/L2Kgj4";
+<script>
+  const redirectUrl = "https://example.com";
 
-// редирект через 1 секунду
-setTimeout(function(){
-
-window.location.href=redirectUrl;
-
-},1000);
-
+  window.addEventListener("load", function () {
+    setTimeout(function () {
+      window.location.replace(redirectUrl);
+    }, 1000);
+  });
 </script>
 
 </body>
